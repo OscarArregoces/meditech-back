@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Reporte PDF</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+   
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2 class="my-5">Servicios en una fecha</h2>
+            </div>
+        </div>
+        <br>
+        <h5>Cantidad de servicios en la fecha  {{fecha1}} : {{ cantidad }}</h5>
+        <hr />
+        <br>
+        
+        <div >
+            <table class="table my-5">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Fecha ingreso</th>
+                        <th scope="col">Cliente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for servicio in data %}
+                    <tr>
+                        <th>{{ servicio.id }}</th>
+                        <th>{{ servicio.titulo }}</th>
+                        <th>{{ servicio.fecha_ingreso }}</th>
+                        <th>{{ servicio.usuarioId.personaId.nombre }}</th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </body>
+</html>

@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from main.views import CheckUsuario, ServiciosDetail, UpdateServicio
+from main.views import *
+from main.consulta1 import export_pdf
+from main.consulta2 import export_pdf2
+from main.consulta3 import export_pdf3
+from main.consulta4 import export_pdf4
+from main.consulta5 import export_pdf5
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +28,14 @@ urlpatterns = [
     path('checkusuario/', CheckUsuario.as_view()),
     path('servicioDetail/', ServiciosDetail.as_view()),
     path('updateServicio/<int:pk>/', UpdateServicio.as_view()),
+    path('consulta1/', Consulta1.as_view()),
+    path('consulta2/', Consulta2.as_view()),
+    path('consulta3/', Consulta3.as_view()),
+    path('consulta4/', Consulta4.as_view()),
+    path('consulta5/', Consulta5.as_view()),
+    path('pdf1/', export_pdf),
+    path('pdf2/', export_pdf2),
+    path('pdf3/', export_pdf3),
+    path('pdf4/', export_pdf4),
+    path('pdf5/', export_pdf5),
 ]
