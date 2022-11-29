@@ -83,15 +83,26 @@ WSGI_APPLICATION = 'meditech.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'meditech',
-        'USER': 'root',
-        'PASSWORD':'oscar',
-        'HOST': 'localhost',
+        'NAME': 'bjs7gckqp3jgwkcjyd7v',
+        'USER': 'ugo6allax8mrdyax',
+        'PASSWORD':'lYx31sNJbQhSDq0mVnRm',
+        'HOST': 'bjs7gckqp3jgwkcjyd7v-mysql.services.clever-cloud.com',
         'PORT': 3306
 
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'meditech',
+#         'USER': 'root',
+#         'PASSWORD':'oscar',
+#         'HOST': 'localhost',
+#         'PORT': 3306
+
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
